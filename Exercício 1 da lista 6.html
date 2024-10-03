@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrada de texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #mensagem {
+            <font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem vindo!</h1>
+    <p>Digite seu nome:</p>
+    <!-- Caixa de entrada para digitar -->
+     <input type="text" id="entradaTexto" placeholder="Seu nome..." oninput="exibirTexto()">
+
+     <input type="submit" value="Clique aqui">
+
+     <!-- Parágrafo onde o texto digitado será exibido -->
+      <p id="mensagem">Por favor, insira seu  nome.</p>
+      <script>
+        function exibirTexto() {
+            let texto = document.getElementById("entradaTexto").value;
+            document.getElementById("mensagem").innerHTML = "Olá  " + texto + "!   Seja bem-vindo(a) á pagina do aluno(a)";
+        }
+        </script>
+</body>
+</html>
